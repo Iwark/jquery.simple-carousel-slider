@@ -1,0 +1,38 @@
+{
+  "name": "jquery.simple-carousel-slider",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Iwark/jquery.simple-carousel-slider",
+  "authors": [
+    "Iwark <iwark02@gmail.com>"
+  ],
+  "description": "Simple jQuery Carousel Slider Plugin",
+  "main": [
+    "dist/css/jquery.simple-carousel-slider.css",
+    "dist/js/jquery.simple-carousel-slider.js",
+    "dist/js/jquery.simple-carousel-slider.min.js"
+  ],
+  "keywords": [
+    "jQuery",
+    "carousel",
+    "slider"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "**/*.html",
+    "bower_components",
+    "doc",
+    "example",
+    "lib",
+    "node_modules",
+    "src",
+    "bower.json",
+    "Gruntfile.coffee",
+    "package.json",
+    "README.md"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "jquery.finger": "~0.1.2"
+  }
+}
