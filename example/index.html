@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Simple Carousel</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../src/css/jquery.simple-carousel-slider.css"> 
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/jquery.finger/jquery.finger.js"></script>
+    <script src="../src/js/jquery.simple-carousel-slider.js"></script>
+    <style>
+      h1{
+        text-align: center;
+      }
+      .sc-slider{
+        margin: 0 auto;
+        width:  500px;
+        height: 333px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>jQuery Simple Carousel Slider</h1>
+
+    <div class="sc-slider">
+      <ul class="sc-slides">
+        <li class="sc-slide">
+          <a href="#">
+            <img src="images/img1.png" />
+          </a>
+        </li>
+        <li class="sc-slide">
+          <a href="#">
+            <img src="images/img2.png" />
+          </a>
+        </li>
+        <li class="sc-slide">
+          <a href="#">
+            <img src="images/img3.png" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      $(function(){
+
+        $('.sc-slider').scSlider({
+          interval: 5000,
+          prev: "＜",
+          next: "＞"
+        });
+
+      });
+    </script>
+  </body>
+</html>
