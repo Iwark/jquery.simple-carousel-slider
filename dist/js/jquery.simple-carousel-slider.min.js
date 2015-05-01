@@ -1,5 +1,5 @@
 /*
- *  jquery.simple-carousel-slider - v1.0.0
+ *  jquery.simple-carousel-slider - v1.0.1
  *  Simple jQuery Carousel Slider Plugin
  *  https://github.com/Iwark/jquery.simple-carousel-slider
  *
