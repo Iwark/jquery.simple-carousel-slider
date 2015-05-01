@@ -1,7 +1,7 @@
 .sc-slider{
   position: relative;
   width: 100%;
-  .sc-prev, .sc-next{
+  .sc-ctrl{
     position: absolute;
     top: 0;
     width: 20px;
@@ -12,21 +12,25 @@
     opacity: 0.8;
     cursor: pointer;
     z-index: 2;
-    display: table;
     &:hover{
       color: #bbb;
     }
-    .sc-inner{
+  }
+  .sc-ctrl-prev{
+    left: 0;
+  }
+  .sc-ctrl-next{
+    right: 0;
+  }
+  .sc-ctrl-wrapper{
+    display: table;
+    height: 100%;
+    .sc-ctrl-inner{
       vertical-align: middle;
       display: table-cell;
     }
   }
-  .sc-prev{
-    left: 0;
-  }
-  .sc-next{
-    right: 0;
-  }
+
   .sc-slides{
     position: absolute;
     top: 0;
@@ -42,6 +46,14 @@
       width: 100%;
       height: 100%;
       display: none;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        img{
+          width: 100%;
+        }
+      }
     }
     .sc-slide.active{
       display: block;

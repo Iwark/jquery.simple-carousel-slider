@@ -19,8 +19,22 @@ do ($ = jQuery) ->
     constructor: (@source, options) ->
       @settings = $.extend {}, _defaults, options
       @$slider   = $(@source)
-      @$prev    = $("<div class='sc-prev'><div class='sc-inner'>#{@settings.prev}</div></div>") if @settings.prev
-      @$next    = $("<div class='sc-next'><div class='sc-inner'>#{@settings.next}</div></div>") if @settings.next
+
+      ctrl = (cls, contents) ->
+        """
+        <div class='sc-ctrl sc-ctrl-#{cls}'>
+          <div class='sc-ctrl-wrapper'>
+            <div class='sc-ctrl-inner'>
+              #{contents}
+            </div>
+          </div>
+        </div>
+        """
+
+      $outer = $("</div>")
+
+      @$prev    = $(ctrl('prev', @settings.prev)) if @settings.prev
+      @$next    = $(ctrl('next', @settings.next)) if @settings.next
       @timer    = null
       @sliding  = false
       @dragging = false

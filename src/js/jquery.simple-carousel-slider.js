@@ -21,14 +21,19 @@
       };
 
       function SCSlider(source, options) {
+        var $outer, ctrl;
         this.source = source;
         this.settings = $.extend({}, _defaults, options);
         this.$slider = $(this.source);
+        ctrl = function(cls, contents) {
+          return "<div class='sc-ctrl sc-ctrl-" + cls + "'>\n  <div class='sc-ctrl-wrapper'>\n    <div class='sc-ctrl-inner'>\n      " + contents + "\n    </div>\n  </div>\n</div>";
+        };
+        $outer = $("</div>");
         if (this.settings.prev) {
-          this.$prev = $("<div class='sc-prev'><div class='sc-inner'>" + this.settings.prev + "</div></div>");
+          this.$prev = $(ctrl('prev', this.settings.prev));
         }
         if (this.settings.next) {
-          this.$next = $("<div class='sc-next'><div class='sc-inner'>" + this.settings.next + "</div></div>");
+          this.$next = $(ctrl('next', this.settings.next));
         }
         this.timer = null;
         this.sliding = false;
